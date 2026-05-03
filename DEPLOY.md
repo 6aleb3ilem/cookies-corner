@@ -1,55 +1,72 @@
-# Deploying to Cloudflare Pages (cookiescorners.com)
+# Deploying to Cloudflare (cookiescorners.com)
 
-The site is configured as a fully static Next.js export. `npm run build`
-produces an `out/` directory (~4 MB) you can host on any static host.
-Cloudflare Pages is the right pick because the domain is already in
-Cloudflare.
+The site is a fully static Next.js export. `npm run build` produces an
+`out/` directory (~4 MB) that Cloudflare serves directly as static
+assets via Workers (or Pages — both work).
 
-## One-time setup (5 minutes, all in the Cloudflare dashboard)
+A `wrangler.jsonc` at the repo root declares this is an assets-only
+project pointed at `./out`, so Cloudflare will NOT try to wrap it with
+OpenNext / Next-on-Workers.
 
-1. Go to **Cloudflare → Workers & Pages → Create → Pages → Connect to Git**.
-2. Pick the GitHub repo `6aleb3ilem/cookies-corner` and the branch
-   `claude/build-cookies-corner-site-5Crc9` (or `main` once you merge).
-3. Set the build settings:
-   - **Framework preset:** Next.js (Static HTML Export)
-   - **Build command:** `npm run build`
-   - **Build output directory:** `out`
-   - **Node version:** `20` (set env var `NODE_VERSION=20`)
-4. Click **Save and Deploy**. First deploy takes ~1 min.
+## Path A: Cloudflare Workers Builds (what the dashboard uses now)
 
-## Attach the domain
+1. **Cloudflare dashboard → Workers & Pages → Create → Import a repository**
+   and pick `6aleb3ilem/cookies-corner`.
+2. **Build configuration:**
+   - Build command: `npm run build`
+   - Deploy command: `npx wrangler deploy` (default is fine)
+   - Root directory: leave blank
+3. **Variables and Secrets:** add `NODE_VERSION=20`.
+4. **Save and Deploy.**
 
-1. In your new Pages project → **Custom domains → Set up a custom domain**.
+The `wrangler.jsonc` file in the repo tells Wrangler this is a static
+assets project, so the deploy step will just upload `out/`. First deploy
+takes ~1 min and gives you a URL like
+`https://cookies-corner.<your-subdomain>.workers.dev`.
+
+## Path B: Classic Cloudflare Pages (also fine)
+
+1. **Workers & Pages → Create → Pages → Connect to Git** → pick the
+   repo, branch `main`.
+2. Build settings:
+   - Framework preset: **Next.js (Static HTML Export)**
+   - Build command: `npm run build`
+   - Build output directory: `out`
+   - Env var: `NODE_VERSION=20`
+3. Save and Deploy. URL will be `https://cookies-corner.pages.dev`.
+
+## Custom domain
+
+Once deployed (either path):
+
+1. Project → **Custom domains → Set up a custom domain**.
 2. Add `cookiescorners.com` and `www.cookiescorners.com`.
-3. Cloudflare auto-creates the DNS records since the domain is already in
-   your account. Wait ~1 min for the cert to issue.
+3. Cloudflare creates the DNS records automatically since the domain is
+   in your account. SSL cert issues in ~1 min.
 
-That's it — every git push to the connected branch triggers a new deploy.
-
-## Manual deploy (alternative, no GitHub connection)
-
-If you prefer to push the built site directly:
+## Local manual deploy (no GitHub connection)
 
 ```bash
 npm install
 npm run build
-npx wrangler pages deploy out --project-name=cookies-corner
+npx wrangler deploy        # uses wrangler.jsonc → uploads out/
 ```
 
-You'll be prompted to log in to Cloudflare on first run.
+First run will open a browser to log into your Cloudflare account.
 
-## Local preview of the production build
+## Local preview
 
 ```bash
 npm run build
-npx serve out   # or any static server
+npx serve out              # any static server works
 ```
 
 ## Notes
 
-- Image optimization is off (`images.unoptimized: true`) because static
-  exports can't run a server. All photos were pre-converted to WebP at
-  ~50–80 KB each, so this is fine.
-- `trailingSlash: true` is enabled so every page has its own folder
-  (`/shop/index.html`) — Cloudflare Pages serves these without redirects.
-- All routes (`/`, `/shop`, `/gift-boxes`, `/about`) are pre-rendered HTML.
+- Image optimization is off (`images.unoptimized: true`) — required for
+  static export. Photos were already pre-converted to WebP at ~50–80 KB.
+- `trailingSlash: true` is set so every page is its own folder
+  (`/shop/index.html`); combined with `html_handling: auto-trailing-slash`
+  in `wrangler.jsonc`, both `/shop` and `/shop/` resolve correctly.
+- The 404 page is auto-served from `out/404.html`.
+
