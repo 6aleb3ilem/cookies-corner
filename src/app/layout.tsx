@@ -3,7 +3,7 @@ import './globals.css';
 import { LanguageProvider } from '@/i18n/LanguageContext';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cookiescorner.mr'),
+  metadataBase: new URL('https://cookiescorners.com'),
   title: 'Cookies Corner Nouakchott | Premium Handmade Cookies & Gift Boxes',
   description:
     'Cookies Corner is a cute premium cookie gift brand in Nouakchott — handmade, soft, chocolate-heavy, and perfect for gifts, cravings, and small celebrations.',

@@ -46,6 +46,6 @@ export const allProducts: Product[] = menuProducts;
 export const WHATSAPP_NUMBER = '22234757912';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const WHATSAPP_PHONE = '+222 34 75 79 12';
-export const EMAIL = 'hello@cookiescorner.mr';
+export const EMAIL = 'hello@cookiescorners.com';
 export const TIKTOK_URL = 'https://www.tiktok.com/@cookiescorner1';
 export const SNAPCHAT_URL = 'https://www.snapchat.com/add/cookiescorner1';
