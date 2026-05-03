@@ -17,9 +17,9 @@ export default function MenuCard({ product }: { product: Product }) {
   const { lang } = useLang();
   const Icon = ICONS[product.category];
   return (
-    <article className="bg-white rounded-3xl shadow-soft border border-beige/40 overflow-hidden flex flex-col">
+    <article className="bg-white rounded-3xl shadow-soft border border-beige/40 overflow-hidden flex flex-col hover:shadow-card hover:-translate-y-0.5 transition">
       <div className="flex items-start gap-2 p-3 pb-1">
-        <span className="w-8 h-8 grid place-items-center rounded-full bg-lavenderSoft text-lavender">
+        <span className="w-8 h-8 grid place-items-center rounded-full bg-lavenderSoft text-lavender shrink-0">
           <Icon className="w-4 h-4" />
         </span>
         <div className="min-w-0">
@@ -38,14 +38,16 @@ export default function MenuCard({ product }: { product: Product }) {
           loading="lazy"
           className="object-cover"
         />
+        <span className="absolute top-2 left-2 bg-white/95 text-blush text-[11px] font-bold rounded-full px-2 py-0.5 shadow-soft">
+          {product.price}
+        </span>
       </div>
-      <div className="px-3 pb-3 flex items-center justify-between">
-        <p className="text-blush font-bold">{product.price}</p>
+      <div className="px-3 pb-3">
         <a
           href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Hi! I'd like to order: ${product.name.en}`)}`}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1 bg-blush hover:bg-blush/90 text-white text-[11px] font-semibold rounded-full px-2.5 py-1.5"
+          className="flex items-center justify-center gap-1.5 w-full bg-blush hover:bg-blush/90 active:scale-[0.98] transition text-white text-[12px] font-semibold rounded-full py-2"
         >
           <WhatsAppIcon className="w-3.5 h-3.5" />
           {t.featured.order[lang]}

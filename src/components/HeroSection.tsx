@@ -24,13 +24,13 @@ export default function HeroSection() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/shop"
-                className="bg-blush hover:bg-blush/90 text-white font-semibold rounded-full px-6 py-3 shadow-soft text-sm"
+                className="bg-blush hover:bg-blush/90 active:scale-95 transition text-white font-semibold rounded-full px-6 py-3 shadow-soft text-sm inline-flex items-center gap-2"
               >
-                {t.hero.cta1[lang]}
+                {t.hero.cta1[lang]} <span aria-hidden="true">→</span>
               </Link>
               <Link
                 href="/gift-boxes"
-                className="bg-white text-cocoa hover:bg-lavenderSoft border border-beige rounded-full px-6 py-3 text-sm font-semibold"
+                className="bg-white text-cocoa hover:bg-lavenderSoft hover:border-lavender active:scale-95 transition border border-beige rounded-full px-6 py-3 text-sm font-semibold"
               >
                 {t.hero.cta2[lang]}
               </Link>
@@ -39,7 +39,7 @@ export default function HeroSection() {
           <div className="order-1 sm:order-2 relative">
             <div className="relative aspect-square rounded-3xl overflow-hidden bg-white shadow-card">
               <Image
-                src="/images/hero/hero-gift-box.png"
+                src="/images/hero/hero-gift-box.webp"
                 alt="Cookies Corner premium gift box"
                 fill
                 priority

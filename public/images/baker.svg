@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Anime baker character holding cookies">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDE7EE"/>
+      <stop offset="100%" stop-color="#F2E8F8"/>
+    </linearGradient>
+    <linearGradient id="apron" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF6F91"/>
+      <stop offset="100%" stop-color="#D85577"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="100%" stop-color="#2B1712"/>
+    </linearGradient>
+    <radialGradient id="cheek" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFB3C8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFB3C8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cookie" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E2B27A"/>
+      <stop offset="100%" stop-color="#B6824A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background blob -->
+  <circle cx="200" cy="240" r="200" fill="url(#bg)"/>
+
+  <!-- sparkles -->
+  <g fill="#A989C5" opacity="0.65">
+    <path d="M70 80 l4 8 l8 4 l-8 4 l-4 8 l-4 -8 l-8 -4 l8 -4z"/>
+    <path d="M340 120 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3z"/>
+    <path d="M60 380 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3z"/>
+  </g>
+  <g fill="#EF6F91" opacity="0.55">
+    <circle cx="350" cy="320" r="5"/>
+    <circle cx="50" cy="200" r="4"/>
+    <circle cx="320" cy="60" r="3"/>
+  </g>
+
+  <!-- Body / apron dress -->
+  <path d="M120 360 Q120 280 200 270 Q280 280 280 360 L290 460 L110 460 Z" fill="url(#apron)"/>
+  <!-- Apron pocket detail -->
+  <rect x="170" y="350" width="60" height="40" rx="6" fill="#fff" opacity="0.18"/>
+  <!-- Apron tie at waist -->
+  <path d="M120 320 Q200 305 280 320 L280 332 Q200 318 120 332 Z" fill="#2B1712" opacity="0.18"/>
+  <!-- Heart on apron -->
+  <path d="M200 318 c-5 -8 -16 -8 -18 1 c0 7 9 13 18 18 c9 -5 18 -11 18 -18 c-2 -9 -13 -9 -18 -1 z" fill="#fff" opacity="0.85"/>
+
+  <!-- Neck -->
+  <rect x="186" y="240" width="28" height="40" rx="10" fill="#F4D5BB"/>
+
+  <!-- Arms holding tray -->
+  <path d="M120 320 Q90 330 90 380 L120 400 Q140 380 140 360 Z" fill="url(#apron)"/>
+  <path d="M280 320 Q310 330 310 380 L280 400 Q260 380 260 360 Z" fill="url(#apron)"/>
+  <!-- Hands -->
+  <circle cx="100" cy="395" r="14" fill="#F4D5BB"/>
+  <circle cx="300" cy="395" r="14" fill="#F4D5BB"/>
+
+  <!-- Tray with cookies -->
+  <rect x="100" y="395" width="200" height="22" rx="8" fill="#C99A45"/>
+  <rect x="100" y="395" width="200" height="6" rx="3" fill="#E8C682"/>
+  <!-- Cookies on tray -->
+  <g>
+    <circle cx="135" cy="392" r="14" fill="url(#cookie)"/>
+    <circle cx="129" cy="389" r="2" fill="#5b3a22"/>
+    <circle cx="140" cy="395" r="2" fill="#5b3a22"/>
+    <circle cx="135" cy="385" r="1.5" fill="#5b3a22"/>
+
+    <circle cx="170" cy="389" r="15" fill="url(#cookie)"/>
+    <circle cx="166" cy="386" r="2" fill="#5b3a22"/>
+    <circle cx="174" cy="392" r="2" fill="#5b3a22"/>
+    <circle cx="172" cy="383" r="1.5" fill="#5b3a22"/>
+
+    <circle cx="205" cy="392" r="14" fill="url(#cookie)"/>
+    <circle cx="200" cy="389" r="2" fill="#5b3a22"/>
+    <circle cx="210" cy="395" r="2" fill="#5b3a22"/>
+
+    <circle cx="240" cy="389" r="15" fill="url(#cookie)"/>
+    <circle cx="235" cy="386" r="2" fill="#5b3a22"/>
+    <circle cx="244" cy="392" r="2" fill="#5b3a22"/>
+
+    <circle cx="270" cy="392" r="13" fill="url(#cookie)"/>
+    <circle cx="266" cy="389" r="2" fill="#5b3a22"/>
+    <circle cx="274" cy="395" r="2" fill="#5b3a22"/>
+  </g>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="180" rx="78" ry="84" fill="#F7DBC0"/>
+  <!-- Hair back -->
+  <path d="M125 175 Q120 100 200 90 Q280 100 275 175 L275 220 Q260 200 245 195 Q200 180 155 195 Q140 200 125 220 Z" fill="url(#hair)"/>
+  <!-- Hair side strand -->
+  <path d="M126 178 Q138 215 158 250 Q148 220 140 195 Z" fill="url(#hair)"/>
+  <path d="M274 178 Q262 215 242 250 Q252 220 260 195 Z" fill="url(#hair)"/>
+  <!-- Hair front fringe -->
+  <path d="M138 130 Q175 100 215 110 Q250 105 268 135 Q255 145 230 138 Q215 152 195 145 Q175 158 158 145 Q145 145 138 138 Z" fill="url(#hair)"/>
+
+  <!-- Chef hat -->
+  <ellipse cx="200" cy="80" rx="62" ry="22" fill="#fff"/>
+  <path d="M160 82 Q140 30 200 30 Q260 30 240 82 Z" fill="#fff"/>
+  <ellipse cx="180" cy="55" rx="20" ry="14" fill="#fff"/>
+  <ellipse cx="220" cy="50" rx="22" ry="16" fill="#fff"/>
+  <!-- Hat band -->
+  <rect x="138" y="78" width="124" height="10" rx="4" fill="#A989C5"/>
+  <!-- Hat heart -->
+  <path d="M200 86 c-3 -5 -10 -5 -11 1 c0 4 6 8 11 11 c5 -3 11 -7 11 -11 c-1 -6 -8 -6 -11 -1 z" fill="#fff"/>
+
+  <!-- Ears -->
+  <circle cx="125" cy="190" r="9" fill="#F4D5BB"/>
+  <circle cx="275" cy="190" r="9" fill="#F4D5BB"/>
+
+  <!-- Cheeks blush -->
+  <ellipse cx="150" cy="205" rx="14" ry="9" fill="url(#cheek)"/>
+  <ellipse cx="250" cy="205" rx="14" ry="9" fill="url(#cheek)"/>
+
+  <!-- Eyes (cute closed-ish anime style) -->
+  <g fill="#2B1712">
+    <ellipse cx="170" cy="195" rx="8" ry="11"/>
+    <ellipse cx="230" cy="195" rx="8" ry="11"/>
+  </g>
+  <!-- Eye shine -->
+  <g fill="#fff">
+    <circle cx="172" cy="192" r="3"/>
+    <circle cx="232" cy="192" r="3"/>
+    <circle cx="168" cy="198" r="1.6"/>
+    <circle cx="228" cy="198" r="1.6"/>
+  </g>
+  <!-- Eyelashes -->
+  <g stroke="#2B1712" stroke-width="2" stroke-linecap="round">
+    <line x1="160" y1="186" x2="156" y2="183"/>
+    <line x1="240" y1="186" x2="244" y2="183"/>
+  </g>
+
+  <!-- Nose hint -->
+  <circle cx="200" cy="215" r="1.6" fill="#C68A66"/>
+
+  <!-- Smile -->
+  <path d="M188 230 Q200 240 212 230" fill="none" stroke="#2B1712" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- tongue dot -->
+  <circle cx="200" cy="234" r="2" fill="#EF6F91"/>
+</svg>

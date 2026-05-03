@@ -32,9 +32,9 @@ export const t = {
       fr: 'Mignon. Premium. Irrésistiblement vôtre.',
     },
     desc: {
-      en: 'A cute premium cookie gift brand in Nouakchott — handmade, soft, chocolate-heavy, and perfect for gifts, cravings, and small celebrations.',
-      ar: 'علامة كوكيز فاخرة ولطيفة في نواكشوط — مصنوعة يدوياً، طرية، غنية بالشوكولاتة، ومثالية للهدايا والاحتفالات الصغيرة.',
-      fr: 'Une marque de cookies cadeaux mignonne et premium à Nouakchott — artisanaux, moelleux, riches en chocolat, parfaits pour offrir, se faire plaisir et célébrer.',
+      en: 'A cute premium cookie gift brand in Nouakchott — handmade, soft, chocolate-heavy, and perfect for gifts, cravings, and parties of all kinds.',
+      ar: 'علامة كوكيز فاخرة ولطيفة في نواكشوط — مصنوعة يدوياً، طرية، غنية بالشوكولاتة، ومثالية للهدايا وكل أنواع الحفلات.',
+      fr: 'Une marque de cookies cadeaux mignonne et premium à Nouakchott — artisanaux, moelleux, riches en chocolat, parfaits pour offrir, se faire plaisir et toutes vos fêtes.',
     },
     cta1: { en: 'Shop Now', ar: 'تسوّق الآن', fr: 'Acheter maintenant' },
     cta2: { en: 'Explore Gift Boxes', ar: 'اكتشف علب الهدايا', fr: 'Découvrir les coffrets' },
@@ -75,14 +75,14 @@ export const t = {
   },
   gifting: {
     title: {
-      en: 'Made for Gifting & Celebrations',
-      ar: 'صُنع للإهداء والاحتفالات',
-      fr: 'Fait pour offrir et célébrer',
+      en: 'Made for Gifting & Parties',
+      ar: 'صُنع للإهداء والحفلات',
+      fr: 'Fait pour offrir et faire la fête',
     },
     desc: {
-      en: 'Beautifully packaged, ready to make any moment extra special.',
-      ar: 'تغليف جميل، جاهز ليجعل أي لحظة مميزة.',
-      fr: 'Joliment emballés, prêts à rendre chaque instant spécial.',
+      en: 'Birthdays, weddings, thank-yous, surprises — we bake for every kind of party.',
+      ar: 'أعياد ميلاد، أعراس، كلمات شكر، مفاجآت — نخبز لكل أنواع الحفلات.',
+      fr: 'Anniversaires, mariages, remerciements, surprises — nous cuisinons pour toutes les fêtes.',
     },
     cta: { en: 'Explore Gift Boxes', ar: 'اكتشف علب الهدايا', fr: 'Découvrir les coffrets' },
   },
@@ -124,11 +124,11 @@ export const t = {
       ar: 'علب فاخرة — تغليف جميل، جاهزة للإسعاد.',
       fr: 'Coffrets premium — joliment emballés, prêts à enchanter.',
     },
-    occasionsTitle: { en: 'For Every Occasion', ar: 'لكل مناسبة', fr: 'Pour chaque occasion' },
+    occasionsTitle: { en: 'For Every Party', ar: 'لكل حفلة', fr: 'Pour toutes les fêtes' },
     occasions: {
       birthdays: { en: 'Birthdays', ar: 'أعياد الميلاد', fr: 'Anniversaires' },
+      weddings: { en: 'Weddings', ar: 'أعراس', fr: 'Mariages' },
       thankyous: { en: 'Thank-Yous', ar: 'كلمات شكر', fr: 'Remerciements' },
-      celebrations: { en: 'Small Celebrations', ar: 'احتفالات صغيرة', fr: 'Petites célébrations' },
       cravings: { en: 'Cravings', ar: 'لحظات الشغف', fr: 'Envies gourmandes' },
       custom: { en: 'Custom Gifts', ar: 'هدايا خاصة', fr: 'Cadeaux personnalisés' },
     },
@@ -146,9 +146,9 @@ export const t = {
   about: {
     title: { en: 'Our Story', ar: 'قصتنا', fr: 'Notre histoire' },
     intro: {
-      en: 'Cookies Corner started as a small home kitchen in Nouakchott, baking soft chocolate-heavy cookies for friends and family. Today we still bake every cookie by hand, in small batches, for the same simple reason — to make sweet moments sweeter.',
-      ar: 'بدأت كوكيز الزاوية في مطبخ صغير بنواكشوط، نخبز كوكيز طري غني بالشوكولاتة للأصدقاء والعائلة. اليوم لا نزال نخبز كل قطعة يدوياً وبكميات صغيرة، لنفس السبب البسيط — لجعل اللحظات الحلوة أحلى.',
-      fr: 'Cookies Corner a commencé dans une petite cuisine maison à Nouakchott, où nous préparions des cookies moelleux et chocolatés pour la famille et les amis. Aujourd’hui encore, chaque cookie est fait main, en petite fournée, pour la même raison — rendre les moments doux encore plus doux.',
+      en: 'Cookies Corner started as a home kitchen in Nouakchott, baking soft chocolate-heavy cookies for friends and family. Today we bake every cookie by hand, for birthdays, weddings, thank-yous, and parties of every kind — to make sweet moments sweeter.',
+      ar: 'بدأت كوكيز الزاوية في مطبخ منزلي بنواكشوط، نخبز كوكيز طري غني بالشوكولاتة للأصدقاء والعائلة. اليوم نخبز كل قطعة يدوياً، لأعياد الميلاد والأعراس وكلمات الشكر وكل أنواع الحفلات — لنجعل اللحظات الحلوة أحلى.',
+      fr: 'Cookies Corner a commencé dans une cuisine maison à Nouakchott, à préparer des cookies moelleux et chocolatés pour la famille et les amis. Aujourd’hui, chaque cookie est fait main pour les anniversaires, les mariages, les remerciements et toutes les fêtes — pour rendre les moments doux encore plus doux.',
     },
     valuesTitle: { en: 'What Makes Us Different', ar: 'ما يميّزنا', fr: 'Ce qui nous distingue' },
     delivery: { en: 'Delivery in Nouakchott', ar: 'توصيل داخل نواكشوط', fr: 'Livraison à Nouakchott' },
@@ -162,6 +162,19 @@ export const t = {
       en: 'Send us a WhatsApp message with the cookies or gift box you’d like. We’ll confirm and arrange delivery.',
       ar: 'أرسل لنا رسالة عبر واتساب بطلب الكوكيز أو علبة الهدايا. سنؤكد ونرتب التوصيل.',
       fr: 'Envoyez-nous un message WhatsApp avec les cookies ou le coffret souhaité. Nous confirmons et organisons la livraison.',
+    },
+  },
+  baker: {
+    eyebrow: { en: 'Meet the baker', ar: 'تعرّف على الخبّازة', fr: 'Notre pâtissière' },
+    title: {
+      en: 'Hi! I’m the girl behind every cookie.',
+      ar: 'أهلاً! أنا الفتاة وراء كل قطعة كوكيز.',
+      fr: 'Coucou ! Je suis la fille derrière chaque cookie.',
+    },
+    desc: {
+      en: 'I bake every batch by hand at home in Nouakchott — with chocolate, patience and a lot of love. Send me a message any time and I’ll make your party extra sweet.',
+      ar: 'أحضّر كل دفعة يدوياً في منزلي بنواكشوط — بالشوكولاتة والصبر وكثير من الحب. أرسل لي رسالة في أي وقت وسأجعل حفلتك أحلى.',
+      fr: 'Je prépare chaque fournée à la main, chez moi à Nouakchott — avec du chocolat, de la patience et beaucoup d’amour. Écris-moi à tout moment et je rendrai ta fête encore plus douce.',
     },
   },
   footer: {

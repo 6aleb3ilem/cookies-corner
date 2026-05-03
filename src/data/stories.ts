@@ -15,11 +15,11 @@ export const stories: StoryCategory[] = [
   {
     id: 'chocolate-drizzle',
     title: { en: 'Chocolate Drizzle', ar: 'برشّة الشوكولاتة', fr: 'Drizzle chocolat' },
-    coverImage: '/images/stories/chocolate-drizzle/cover.png',
+    coverImage: '/images/stories/chocolate-drizzle/cover.webp',
     items: [
       {
         type: 'image',
-        src: '/images/stories/chocolate-drizzle/01.png',
+        src: '/images/stories/chocolate-drizzle/01.webp',
         caption: {
           en: 'Hand-poured dark chocolate, drizzled while warm.',
           ar: 'شوكولاتة داكنة مسكوبة يدوياً وهي دافئة.',
@@ -28,7 +28,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/chocolate-drizzle/02.png',
+        src: '/images/stories/chocolate-drizzle/02.webp',
         caption: {
           en: 'Soft inside, glossy chocolate finish on top.',
           ar: 'طري من الداخل، لمعة شوكولاتة على الأعلى.',
@@ -37,7 +37,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/chocolate-drizzle/03.png',
+        src: '/images/stories/chocolate-drizzle/03.webp',
         caption: {
           en: 'Pure indulgence in every bite.',
           ar: 'متعة خالصة في كل قضمة.',
@@ -49,11 +49,11 @@ export const stories: StoryCategory[] = [
   {
     id: 'pistachio-nuts',
     title: { en: 'Pistachio & Nuts', ar: 'فستق ومكسرات', fr: 'Pistache & noix' },
-    coverImage: '/images/stories/pistachio-nuts/cover.png',
+    coverImage: '/images/stories/pistachio-nuts/cover.webp',
     items: [
       {
         type: 'image',
-        src: '/images/stories/pistachio-nuts/01.png',
+        src: '/images/stories/pistachio-nuts/01.webp',
         caption: {
           en: 'Crunch and softness in one bite.',
           ar: 'هشاشة وطراوة في قضمة واحدة.',
@@ -62,7 +62,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/pistachio-nuts/02.png',
+        src: '/images/stories/pistachio-nuts/02.webp',
         caption: {
           en: 'Premium pistachios, real ingredients.',
           ar: 'فستق فاخر ومكونات حقيقية.',
@@ -74,11 +74,11 @@ export const stories: StoryCategory[] = [
   {
     id: 'stuffed-cookies',
     title: { en: 'Stuffed Cookies', ar: 'كوكيز محشي', fr: 'Cookies fourrés' },
-    coverImage: '/images/stories/stuffed-cookies/cover.png',
+    coverImage: '/images/stories/stuffed-cookies/cover.webp',
     items: [
       {
         type: 'image',
-        src: '/images/stories/stuffed-cookies/01.png',
+        src: '/images/stories/stuffed-cookies/01.webp',
         caption: {
           en: 'Soft, golden cookies with a rich, gooey center.',
           ar: 'كوكيز ذهبي طري بقلب غني وذائب.',
@@ -87,7 +87,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/stuffed-cookies/02.png',
+        src: '/images/stories/stuffed-cookies/02.webp',
         caption: {
           en: 'Made for true cookie lovers.',
           ar: 'لعشّاق الكوكيز الحقيقيين.',
@@ -96,7 +96,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/stuffed-cookies/03.png',
+        src: '/images/stories/stuffed-cookies/03.webp',
         caption: {
           en: 'Pull it apart and watch the magic.',
           ar: 'افتحه وشاهد السحر.',
@@ -108,11 +108,11 @@ export const stories: StoryCategory[] = [
   {
     id: 'gift-boxes',
     title: { en: 'Gift Boxes', ar: 'علب الهدايا', fr: 'Coffrets cadeaux' },
-    coverImage: '/images/stories/gift-boxes/cover.png',
+    coverImage: '/images/stories/gift-boxes/cover.webp',
     items: [
       {
         type: 'image',
-        src: '/images/stories/gift-boxes/01.png',
+        src: '/images/stories/gift-boxes/01.webp',
         caption: {
           en: 'Beautifully packed for sweet moments.',
           ar: 'تغليف جميل للحظات حلوة.',
@@ -121,7 +121,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/gift-boxes/02.png',
+        src: '/images/stories/gift-boxes/02.webp',
         caption: {
           en: 'Lavender ribbon, gold accents, premium feel.',
           ar: 'شريط لافندر ولمسات ذهبية، إحساس فاخر.',
@@ -130,7 +130,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/gift-boxes/03.png',
+        src: '/images/stories/gift-boxes/03.webp',
         caption: {
           en: 'Ready to gift, ready to delight.',
           ar: 'جاهزة للإهداء، جاهزة للإسعاد.',
@@ -142,11 +142,11 @@ export const stories: StoryCategory[] = [
   {
     id: 'thank-you-cakes',
     title: { en: 'Thank You Cakes', ar: 'كيك الشكر', fr: 'Cakes de remerciement' },
-    coverImage: '/images/stories/thank-you-cakes/cover.png',
+    coverImage: '/images/stories/thank-you-cakes/cover.webp',
     items: [
       {
         type: 'image',
-        src: '/images/stories/thank-you-cakes/01.png',
+        src: '/images/stories/thank-you-cakes/01.webp',
         caption: {
           en: 'A sweet way to say thank you.',
           ar: 'طريقة حلوة لقول شكراً.',
@@ -158,11 +158,11 @@ export const stories: StoryCategory[] = [
   {
     id: 'behind-the-scenes',
     title: { en: 'Behind the Scenes', ar: 'خلف الكواليس', fr: 'Coulisses' },
-    coverImage: '/images/stories/behind-the-scenes/cover.png',
+    coverImage: '/images/stories/behind-the-scenes/cover.webp',
     items: [
       {
         type: 'image',
-        src: '/images/stories/behind-the-scenes/01.png',
+        src: '/images/stories/behind-the-scenes/01.webp',
         caption: {
           en: 'Every cookie hand-shaped.',
           ar: 'كل قطعة تُشكَّل يدوياً.',
@@ -171,7 +171,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/behind-the-scenes/02.png',
+        src: '/images/stories/behind-the-scenes/02.webp',
         caption: {
           en: 'Small batches, big love.',
           ar: 'كميات صغيرة، حب كبير.',
@@ -183,11 +183,11 @@ export const stories: StoryCategory[] = [
   {
     id: 'freshly-baked',
     title: { en: 'Freshly Baked', ar: 'طازج من الفرن', fr: 'Sorti du four' },
-    coverImage: '/images/stories/freshly-baked/cover.png',
+    coverImage: '/images/stories/freshly-baked/cover.webp',
     items: [
       {
         type: 'image',
-        src: '/images/stories/freshly-baked/01.png',
+        src: '/images/stories/freshly-baked/01.webp',
         caption: {
           en: 'Warm cookies, straight from the oven.',
           ar: 'كوكيز دافئ مباشرة من الفرن.',
@@ -196,7 +196,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/freshly-baked/02.png',
+        src: '/images/stories/freshly-baked/02.webp',
         caption: {
           en: 'That first warm bite.',
           ar: 'تلك القضمة الدافئة الأولى.',
@@ -208,11 +208,11 @@ export const stories: StoryCategory[] = [
   {
     id: 'packaging',
     title: { en: 'Packaging', ar: 'التغليف', fr: 'Emballage' },
-    coverImage: '/images/stories/packaging/cover.png',
+    coverImage: '/images/stories/packaging/cover.webp',
     items: [
       {
         type: 'image',
-        src: '/images/stories/packaging/01.png',
+        src: '/images/stories/packaging/01.webp',
         caption: {
           en: 'Every box wrapped by hand.',
           ar: 'كل علبة تُغلَّف يدوياً.',
@@ -221,7 +221,7 @@ export const stories: StoryCategory[] = [
       },
       {
         type: 'image',
-        src: '/images/stories/packaging/02.png',
+        src: '/images/stories/packaging/02.webp',
         caption: {
           en: 'Premium box, ribbon, and message card.',
           ar: 'علبة فاخرة، شريط، وبطاقة رسالة.',

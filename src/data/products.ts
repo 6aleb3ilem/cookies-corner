@@ -16,90 +16,36 @@ export const menuProducts: Product[] = [
     subtitle: { en: '8 pieces', ar: '8 قطع', fr: '8 pièces' },
     price: '350 MRU',
     category: 'boxes',
-    image: '/images/products/box-cookies.png',
+    image: '/images/products/box-cookies.webp',
   },
   {
     id: 'cookies-scoop',
     name: { en: 'Cookies scoop', ar: 'كوكيز سكوب', fr: 'Cookies scoop' },
     price: '250 MRU',
     category: 'dessert',
-    image: '/images/products/cookies-scoop.png',
+    image: '/images/products/cookies-scoop.webp',
   },
   {
     id: 'cake-cookies',
     name: { en: 'Cake cookies', ar: 'كيك كوكيز', fr: 'Cake cookies' },
     price: '500 MRU',
     category: 'cake',
-    image: '/images/products/cake-cookies.png',
+    image: '/images/products/cake-cookies.webp',
   },
   {
     id: 'cookies-gourmands',
     name: { en: 'Cookies gourmands', ar: 'كوكيز غورمان', fr: 'Cookies gourmands' },
     price: '150 MRU',
     category: 'cookies',
-    image: '/images/products/cookies-gourmands.png',
+    image: '/images/products/cookies-gourmands.webp',
   },
 ];
 
-export const featuredProducts: Product[] = [
-  {
-    id: 'stuffed-chocolate-cookies',
-    name: {
-      en: 'Stuffed Chocolate Cookies',
-      ar: 'كوكيز شوكولاتة محشي',
-      fr: 'Cookies fourrés au chocolat',
-    },
-    price: '200 MRU',
-    category: 'cookies',
-    image: '/images/products/stuffed-chocolate-cookies.png',
-  },
-  {
-    id: 'pistachio-nuts-cookies',
-    name: {
-      en: 'Pistachio & Nuts Cookies',
-      ar: 'كوكيز فستق ومكسرات',
-      fr: 'Cookies pistache & noix',
-    },
-    price: '220 MRU',
-    category: 'cookies',
-    image: '/images/products/pistachio-nuts-cookies.png',
-  },
-  {
-    id: 'gift-box-6',
-    name: { en: 'Gift Box – 6 Cookies', ar: 'علبة هدية – 6 قطع', fr: 'Coffret cadeau – 6 cookies' },
-    price: '300 MRU',
-    category: 'boxes',
-    image: '/images/products/gift-box-6.png',
-  },
-  {
-    id: 'thank-you-cake-cookie',
-    name: { en: 'Thank You Cake Cookie', ar: 'كيك كوكيز شكراً', fr: 'Thank You Cake Cookie' },
-    price: '500 MRU',
-    category: 'cake',
-    image: '/images/products/thank-you-cake-cookie.png',
-  },
-  {
-    id: 'chocolate-drizzle-cookies',
-    name: {
-      en: 'Chocolate Drizzle Cookies',
-      ar: 'كوكيز برشّة شوكولاتة',
-      fr: 'Cookies nappés de chocolat',
-    },
-    price: '180 MRU',
-    category: 'cookies',
-    image: '/images/products/chocolate-drizzle-cookies.png',
-  },
-  {
-    id: 'mini-celebration-box',
-    name: { en: 'Mini Celebration Box', ar: 'علبة احتفال صغيرة', fr: 'Mini coffret célébration' },
-    price: '350 MRU',
-    category: 'boxes',
-    image: '/images/products/mini-celebration-box.png',
-  },
-];
+export const allProducts: Product[] = menuProducts;
 
-export const allProducts: Product[] = [...menuProducts, ...featuredProducts];
-
-export const WHATSAPP_URL = 'https://wa.me/22245255325';
-export const WHATSAPP_PHONE = '+222 45 25 53 25';
+export const WHATSAPP_NUMBER = '22234757912';
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+export const WHATSAPP_PHONE = '+222 34 75 79 12';
 export const EMAIL = 'hello@cookiescorner.mr';
+export const TIKTOK_URL = 'https://www.tiktok.com/@cookiescorner1';
+export const SNAPCHAT_URL = 'https://www.snapchat.com/add/cookiescorner1';

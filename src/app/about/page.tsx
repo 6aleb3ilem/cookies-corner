@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import BakerSection from '@/components/BakerSection';
 import { useLang } from '@/i18n/LanguageContext';
 import { t } from '@/i18n/translations';
-import { CookieIcon, GiftIcon, HeartIcon, WhatsAppIcon } from '@/components/Icons';
+import { CookieIcon, GiftIcon, HeartIcon } from '@/components/Icons';
 import GiftingContact from '@/components/GiftingContact';
 
 export default function AboutPage() {
@@ -28,7 +29,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square rounded-3xl overflow-hidden bg-white shadow-card">
               <Image
-                src="/images/products/cookies-gourmands.png"
+                src="/images/products/cookies-gourmands.webp"
                 alt="Cookies Corner story"
                 fill
                 sizes="(max-width: 640px) 90vw, 40vw"
@@ -64,6 +65,7 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <BakerSection />
         <GiftingContact />
       </main>
       <Footer />

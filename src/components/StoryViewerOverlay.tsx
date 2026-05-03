@@ -166,11 +166,11 @@ export default function StoryViewerOverlay({ open, initialStoryIndex, onClose }:
               alt="Cookies Corner"
               width={28}
               height={28}
-              className="rounded-full bg-white/10 p-0.5"
+              className="rounded-full bg-white/95 p-0.5"
             />
             <div className="leading-tight">
-              <p className="font-serif text-sm">Cookies Corner</p>
-              <p className="text-[11px] text-white/70">{t.stories.title[lang]}</p>
+              <p className="font-serif text-sm">{t.stories.title[lang]}</p>
+              <p className="text-[11px] text-white/70">Cookies Corner</p>
             </div>
           </div>
           <button

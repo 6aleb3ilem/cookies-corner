@@ -3,20 +3,20 @@
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import ProductCard from '@/components/ProductCard';
-import { allProducts, WHATSAPP_URL } from '@/data/products';
+import MenuCard from '@/components/MenuCard';
+import { menuProducts, WHATSAPP_URL } from '@/data/products';
 import { useLang } from '@/i18n/LanguageContext';
 import { t } from '@/i18n/translations';
 import { GiftIcon, HeartIcon, WhatsAppIcon } from '@/components/Icons';
 
 export default function GiftBoxesPage() {
   const { lang } = useLang();
-  const boxes = allProducts.filter((p) => p.category === 'boxes' || p.category === 'cake');
+  const boxes = menuProducts.filter((p) => p.category === 'boxes' || p.category === 'cake');
 
   const occasions = [
     { key: 'birthdays', icon: '🎂' },
+    { key: 'weddings', icon: '💍' },
     { key: 'thankyous', icon: '💌' },
-    { key: 'celebrations', icon: '✨' },
     { key: 'cravings', icon: '🍪' },
     { key: 'custom', icon: '🎁' },
   ] as const;
@@ -34,7 +34,7 @@ export default function GiftBoxesPage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 mt-4 bg-blush hover:bg-blush/90 text-white font-semibold rounded-full px-5 py-2.5 text-sm shadow-soft"
+                className="inline-flex items-center gap-2 mt-4 bg-blush hover:bg-blush/90 active:scale-95 transition text-white font-semibold rounded-full px-5 py-2.5 text-sm shadow-soft"
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 {t.contact.whatsapp[lang]}
@@ -42,7 +42,7 @@ export default function GiftBoxesPage() {
             </div>
             <div className="relative aspect-square rounded-3xl overflow-hidden bg-white shadow-card">
               <Image
-                src="/images/hero/hero-gift-box.png"
+                src="/images/hero/hero-gift-box.webp"
                 alt="Premium gift box"
                 fill
                 sizes="(max-width: 640px) 90vw, 40vw"
@@ -54,9 +54,9 @@ export default function GiftBoxesPage() {
 
         <section className="mt-8">
           <h2 className="font-serif text-2xl text-cocoa mb-3">{t.giftPage.title[lang]}</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 gap-3">
             {boxes.map((p) => (
-              <ProductCard key={p.id} product={p} compact />
+              <MenuCard key={p.id} product={p} />
             ))}
           </div>
         </section>
@@ -89,7 +89,7 @@ export default function GiftBoxesPage() {
             href={`${WHATSAPP_URL}?text=${encodeURIComponent("Hi! I'd like a gift box with a custom message card.")}`}
             target="_blank"
             rel="noreferrer"
-            className="mt-4 flex items-center justify-center gap-2 w-full bg-blush hover:bg-blush/90 text-white font-semibold rounded-full py-3 shadow-soft"
+            className="mt-4 flex items-center justify-center gap-2 w-full bg-blush hover:bg-blush/90 active:scale-[0.98] transition text-white font-semibold rounded-full py-3 shadow-soft"
           >
             <GiftIcon className="w-5 h-5" />
             {t.contact.whatsapp[lang]}

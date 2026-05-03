@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Cookies Corner Nouakchott | Premium Handmade Cookies & Gift Boxes',
     description:
       'Cookies Corner is a cute premium cookie gift brand in Nouakchott — handmade, soft, chocolate-heavy, and perfect for gifts, cravings, and small celebrations.',
-    images: ['/images/hero/hero-gift-box.png'],
+    images: ['/images/hero/hero-gift-box.webp'],
     type: 'website',
   },
   icons: {

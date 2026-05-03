@@ -1,5 +1,5 @@
+import BakerSection from '@/components/BakerSection';
 import FeatureBadges from '@/components/FeatureBadges';
-import FeaturedProducts from '@/components/FeaturedProducts';
 import Footer from '@/components/Footer';
 import GiftingContact from '@/components/GiftingContact';
 import Header from '@/components/Header';
@@ -16,8 +16,8 @@ export default function HomePage() {
         <HeroSection />
         <FeatureBadges />
         <StoriesStrip />
-        <FeaturedProducts />
         <MenuGrid />
+        <BakerSection />
         <PoemBlock />
         <GiftingContact />
       </main>

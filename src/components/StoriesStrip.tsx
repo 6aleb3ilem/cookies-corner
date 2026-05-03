@@ -24,9 +24,9 @@ export default function StoriesStrip() {
         <button
           type="button"
           onClick={() => openAt(0)}
-          className="text-sm font-semibold text-blush hover:text-blush/80"
+          className="text-sm font-semibold text-white bg-blush hover:bg-blush/90 active:scale-95 transition rounded-full px-3 py-1.5 shadow-soft inline-flex items-center gap-1"
         >
-          {t.stories.open[lang]} →
+          {t.stories.open[lang]} <span aria-hidden="true">→</span>
         </button>
       </div>
 
