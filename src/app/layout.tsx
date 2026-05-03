@@ -1,0 +1,46 @@
+import type { Metadata } from 'next';
+import './globals.css';
+import { LanguageProvider } from '@/i18n/LanguageContext';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://cookiescorner.mr'),
+  title: 'Cookies Corner Nouakchott | Premium Handmade Cookies & Gift Boxes',
+  description:
+    'Cookies Corner is a cute premium cookie gift brand in Nouakchott — handmade, soft, chocolate-heavy, and perfect for gifts, cravings, and small celebrations.',
+  keywords: [
+    'Cookies Nouakchott',
+    'cookie gift box Mauritania',
+    'handmade cookies Nouakchott',
+    'Cookies Corner',
+    'gâteau cookies Nouakchott',
+    'cookies gourmands',
+  ],
+  openGraph: {
+    title: 'Cookies Corner Nouakchott | Premium Handmade Cookies & Gift Boxes',
+    description:
+      'Cookies Corner is a cute premium cookie gift brand in Nouakchott — handmade, soft, chocolate-heavy, and perfect for gifts, cravings, and small celebrations.',
+    images: ['/images/hero/hero-gift-box.png'],
+    type: 'website',
+  },
+  icons: {
+    icon: '/images/logo/cookies-corner-logo.png',
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="bg-cream text-cocoa antialiased">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
+    </html>
+  );
+}

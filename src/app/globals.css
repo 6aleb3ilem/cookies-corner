@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Fraunces', 'Playfair Display', 'Cormorant Garamond', serif;
+  --font-arabic: 'Noto Naskh Arabic', 'Tajawal', serif;
+  --font-script: 'Dancing Script', cursive;
+}
+
+html,
+body {
+  background-color: #FFF8F1;
+  color: #2B1712;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[dir='rtl'] body {
+  font-family: var(--font-arabic);
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.story-ring {
+  background: conic-gradient(from 180deg at 50% 50%, #EF6F91, #A989C5, #EF6F91);
+}
+
+body.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.shimmer {
+  background: linear-gradient(110deg, #fde7ee 8%, #f2e8f8 18%, #fde7ee 33%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+@keyframes shimmer {
+  to { background-position-x: -200%; }
+}
