@@ -30,15 +30,31 @@ export default function MobileMenuDrawer({ open, onClose }: Props) {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 animate-fadeIn" role="dialog" aria-modal="true">
+    <div
+      className="fixed inset-0 z-[100] animate-fadeIn"
+      role="dialog"
+      aria-modal="true"
+      style={{ isolation: 'isolate' }}
+    >
       <button
         type="button"
         aria-label="Close menu"
         onClick={onClose}
-        className="absolute inset-0 bg-cocoa/60 backdrop-blur-sm"
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(43, 23, 18, 0.7)', backdropFilter: 'blur(4px)' }}
       />
-      <aside className="absolute top-0 left-0 h-full w-[82%] max-w-sm bg-white shadow-2xl border-r border-beige flex flex-col">
-        <div className="flex items-center justify-between p-5 border-b border-beige bg-blushSoft">
+      <aside
+        className="absolute top-0 left-0 h-full w-[84%] max-w-sm flex flex-col"
+        style={{
+          backgroundColor: '#FFFFFF',
+          boxShadow: '0 25px 60px -10px rgba(0,0,0,0.45)',
+          borderRight: '1px solid #EFD8C7',
+        }}
+      >
+        <div
+          className="flex items-center justify-between p-5"
+          style={{ backgroundColor: '#FDE7EE', borderBottom: '1px solid #EFD8C7' }}
+        >
           <Link href="/" onClick={onClose} className="flex items-center gap-2 min-w-0">
             <Image
               src="/images/logo/cookies-corner-logo.jpeg"
@@ -47,35 +63,53 @@ export default function MobileMenuDrawer({ open, onClose }: Props) {
               height={40}
               className="rounded-full object-contain shrink-0"
             />
-            <span className="font-serif text-lg text-cocoa truncate">Cookies Corner</span>
+            <span
+              className="font-serif text-lg truncate"
+              style={{ color: '#2B1712' }}
+            >
+              Cookies Corner
+            </span>
           </Link>
           <button
             type="button"
             aria-label="Close menu"
             onClick={onClose}
-            className="w-9 h-9 grid place-items-center rounded-full bg-blushSoft text-blush shrink-0"
+            className="w-9 h-9 grid place-items-center rounded-full shrink-0"
+            style={{ backgroundColor: '#FFFFFF', color: '#EF6F91', border: '1px solid #EFD8C7' }}
           >
             <CloseIcon className="w-5 h-5" />
           </button>
         </div>
-        <nav className="flex flex-col p-4 gap-1">
+        <nav
+          className="flex flex-col p-4 gap-1 flex-1 overflow-y-auto"
+          style={{ backgroundColor: '#FFFFFF' }}
+        >
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={onClose}
-              className="px-4 py-3 rounded-2xl text-cocoa hover:bg-blushSoft text-base font-medium"
+              className="px-4 py-3.5 rounded-2xl text-base font-semibold hover:bg-blushSoft transition"
+              style={{ color: '#2B1712' }}
             >
               {l.label}
             </Link>
           ))}
         </nav>
-        <div className="mt-auto p-5">
+        <div
+          className="p-5"
+          style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #EFD8C7' }}
+        >
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center gap-2 w-full bg-blush hover:bg-blush/90 text-white font-semibold rounded-full py-3.5 shadow-soft"
+            className="flex items-center justify-center gap-2 w-full font-semibold rounded-full py-3.5"
+            style={{
+              backgroundColor: '#EF6F91',
+              color: '#FFFFFF',
+              boxShadow: '0 6px 24px -10px rgba(43, 23, 18, 0.35)',
+            }}
           >
             <WhatsAppIcon className="w-5 h-5" />
             {t.nav.order[lang]}
