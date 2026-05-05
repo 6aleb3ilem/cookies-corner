@@ -35,10 +35,10 @@ export default function MobileMenuDrawer({ open, onClose }: Props) {
         type="button"
         aria-label="Close menu"
         onClick={onClose}
-        className="absolute inset-0 bg-cocoa/40"
+        className="absolute inset-0 bg-cocoa/60 backdrop-blur-sm"
       />
-      <aside className="absolute top-0 left-0 h-full w-[82%] max-w-sm bg-cream shadow-card flex flex-col">
-        <div className="flex items-center justify-between p-5 border-b border-beige/60 bg-lavenderSoft/40">
+      <aside className="absolute top-0 left-0 h-full w-[82%] max-w-sm bg-white shadow-2xl border-r border-beige flex flex-col">
+        <div className="flex items-center justify-between p-5 border-b border-beige bg-blushSoft">
           <Link href="/" onClick={onClose} className="flex items-center gap-2 min-w-0">
             <Image
               src="/images/logo/cookies-corner-logo.jpeg"

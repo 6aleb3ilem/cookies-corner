@@ -15,7 +15,11 @@ export type Product = {
 export const menuProducts: Product[] = [
   {
     id: 'box-cookies-8',
-    name: { en: 'Box cookies', ar: 'علبة كوكيز', fr: 'Box cookies' },
+    name: {
+      en: 'Classic Cookie Box — 8 pcs',
+      ar: 'علبة الكوكيز الكلاسيكية — 8 قطع',
+      fr: 'Coffret Cookies Classique — 8 pcs',
+    },
     subtitle: { en: '8 pieces', ar: '8 قطع', fr: '8 pièces' },
     price: '350 MRU',
     category: 'boxes',
@@ -23,21 +27,33 @@ export const menuProducts: Product[] = [
   },
   {
     id: 'cookies-scoop',
-    name: { en: 'Cookies scoop', ar: 'كوكيز سكوب', fr: 'Cookies scoop' },
+    name: {
+      en: 'Cookie Scoops Cup',
+      ar: 'كوب سكوبات الكوكيز',
+      fr: 'Coupe Cookies Scoops',
+    },
     price: '250 MRU',
     category: 'dessert',
     image: '/images/products/cookies-scoop.webp',
   },
   {
     id: 'cake-cookies',
-    name: { en: 'Cake cookies', ar: 'كيك كوكيز', fr: 'Cake cookies' },
+    name: {
+      en: 'Cookie Cake Box',
+      ar: 'علبة كعكة الكوكيز',
+      fr: 'Coffret Cookie Cake',
+    },
     price: '500 MRU',
     category: 'cake',
     image: '/images/products/cake-cookies.webp',
   },
   {
     id: 'cookies-gourmands',
-    name: { en: 'Cookies gourmands', ar: 'كوكيز غورمان', fr: 'Cookies gourmands' },
+    name: {
+      en: 'Gourmet Stuffed Cookies',
+      ar: 'كوكيز محشوة غورميه',
+      fr: 'Cookies Gourmets Fourrés',
+    },
     price: 'From 200 MRU',
     tiers: [
       { qty: 1, price: '200 MRU' },
