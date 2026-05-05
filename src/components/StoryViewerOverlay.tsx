@@ -113,18 +113,20 @@ export default function StoryViewerOverlay({ open, initialStoryIndex, onClose }:
     return () => window.removeEventListener('keydown', onKey);
   }, [open, goNext, goPrev, onClose]);
 
-  // preload
+  // preload adjacent items only (next item, then first item of next story)
   useEffect(() => {
-    if (!open) return;
-    stories.forEach((s) =>
-      s.items.forEach((it) => {
-        if (it.type === 'image') {
-          const img = new window.Image();
-          img.src = it.src;
-        }
-      }),
-    );
-  }, [open]);
+    if (!open || !currentStory) return;
+    const toPreload: string[] = [];
+    const next = currentStory.items[itemIndex + 1];
+    if (next?.type === 'image') toPreload.push(next.src);
+    const nextStory = stories[storyIndex + 1];
+    const nextStoryFirst = nextStory?.items[0];
+    if (nextStoryFirst?.type === 'image') toPreload.push(nextStoryFirst.src);
+    toPreload.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, [open, currentStory, itemIndex, storyIndex]);
 
   if (!open || !currentStory || !currentItem) return null;
 
@@ -162,7 +164,7 @@ export default function StoryViewerOverlay({ open, initialStoryIndex, onClose }:
         <div className="absolute top-5 left-0 right-0 z-20 flex items-center justify-between px-4 pt-3">
           <div className="flex items-center gap-2 text-white">
             <Image
-              src="/images/logo/cookies-corner-logo.png"
+              src="/images/logo/cookies-corner-logo.jpeg"
               alt="Cookies Corner"
               width={28}
               height={28}

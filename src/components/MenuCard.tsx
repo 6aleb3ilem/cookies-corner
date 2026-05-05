@@ -42,7 +42,20 @@ export default function MenuCard({ product }: { product: Product }) {
           {product.price}
         </span>
       </div>
-      <div className="px-3 pb-3">
+      {product.tiers && (
+        <ul className="mx-3 mb-2 grid grid-cols-3 gap-1 text-[11px]">
+          {product.tiers.map((tier) => (
+            <li
+              key={tier.qty}
+              className="flex flex-col items-center rounded-xl bg-blushSoft text-cocoa px-1 py-1.5"
+            >
+              <span className="font-semibold text-cocoa/70">×{tier.qty}</span>
+              <span className="font-bold text-blush">{tier.price}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      <div className="px-3 pb-3 mt-auto">
         <a
           href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Hi! I'd like to order: ${product.name.en}`)}`}
           target="_blank"

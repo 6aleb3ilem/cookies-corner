@@ -2,13 +2,15 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
-import MobileMenuDrawer from './MobileMenuDrawer';
 import PromoRibbon from './PromoRibbon';
 import { CartIcon, MenuIcon } from './Icons';
 import { useLang } from '@/i18n/LanguageContext';
 import { t } from '@/i18n/translations';
+
+const MobileMenuDrawer = dynamic(() => import('./MobileMenuDrawer'), { ssr: false });
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -27,25 +29,26 @@ export default function Header() {
           <MenuIcon className="w-5 h-5" />
         </button>
 
-        <Link href="/" className="flex items-center gap-2 min-w-0">
+        <Link href="/" className="flex items-center gap-2 min-w-0 shrink">
           <Image
-            src="/images/logo/cookies-corner-logo.png"
+            src="/images/logo/cookies-corner-logo.jpeg"
             alt="Cookies Corner"
             width={36}
             height={36}
-            className="rounded-full object-contain"
+            priority
+            className="rounded-full object-contain shrink-0"
           />
-          <span className="font-serif text-lg text-cocoa whitespace-nowrap">
+          <span className="hidden sm:inline font-serif text-lg text-cocoa whitespace-nowrap truncate">
             Cookies Corner
           </span>
         </Link>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <LanguageSwitcher compact />
           <Link
             href="/shop"
             aria-label="Cart"
-            className="relative w-10 h-10 grid place-items-center rounded-full bg-blushSoft text-blush"
+            className="relative w-10 h-10 grid place-items-center rounded-full bg-blushSoft text-blush shrink-0"
           >
             <CartIcon className="w-5 h-5" />
             <span className="absolute -top-1 -right-1 bg-blush text-white text-[10px] w-4 h-4 grid place-items-center rounded-full font-semibold">
@@ -61,7 +64,7 @@ export default function Header() {
         <Link href="/gift-boxes" className="hover:text-blush">{t.nav.gifts[lang]}</Link>
         <Link href="/about" className="hover:text-blush">{t.nav.about[lang]}</Link>
       </nav>
-      <MobileMenuDrawer open={open} onClose={() => setOpen(false)} />
+      {open && <MobileMenuDrawer open={open} onClose={() => setOpen(false)} />}
     </header>
   );
 }

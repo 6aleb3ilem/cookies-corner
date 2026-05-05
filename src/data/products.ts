@@ -1,10 +1,13 @@
 export type ProductCategory = 'boxes' | 'cookies' | 'dessert' | 'cake';
 
+export type PriceTier = { qty: number; price: string };
+
 export type Product = {
   id: string;
   name: { en: string; ar: string; fr: string };
   subtitle?: { en: string; ar: string; fr: string };
   price: string;
+  tiers?: PriceTier[];
   category: ProductCategory;
   image: string;
 };
@@ -35,7 +38,12 @@ export const menuProducts: Product[] = [
   {
     id: 'cookies-gourmands',
     name: { en: 'Cookies gourmands', ar: 'كوكيز غورمان', fr: 'Cookies gourmands' },
-    price: '150 MRU',
+    price: 'From 200 MRU',
+    tiers: [
+      { qty: 1, price: '200 MRU' },
+      { qty: 2, price: '370 MRU' },
+      { qty: 3, price: '550 MRU' },
+    ],
     category: 'cookies',
     image: '/images/products/cookies-gourmands.webp',
   },

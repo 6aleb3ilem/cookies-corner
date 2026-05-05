@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { useLang } from '@/i18n/LanguageContext';
@@ -37,13 +38,22 @@ export default function MobileMenuDrawer({ open, onClose }: Props) {
         className="absolute inset-0 bg-cocoa/40"
       />
       <aside className="absolute top-0 left-0 h-full w-[82%] max-w-sm bg-cream shadow-card flex flex-col">
-        <div className="flex items-center justify-between p-5 border-b border-beige/60">
-          <span className="font-serif text-xl text-cocoa">Cookies Corner</span>
+        <div className="flex items-center justify-between p-5 border-b border-beige/60 bg-lavenderSoft/40">
+          <Link href="/" onClick={onClose} className="flex items-center gap-2 min-w-0">
+            <Image
+              src="/images/logo/cookies-corner-logo.jpeg"
+              alt="Cookies Corner"
+              width={40}
+              height={40}
+              className="rounded-full object-contain shrink-0"
+            />
+            <span className="font-serif text-lg text-cocoa truncate">Cookies Corner</span>
+          </Link>
           <button
             type="button"
             aria-label="Close menu"
             onClick={onClose}
-            className="w-9 h-9 grid place-items-center rounded-full bg-blushSoft text-blush"
+            className="w-9 h-9 grid place-items-center rounded-full bg-blushSoft text-blush shrink-0"
           >
             <CloseIcon className="w-5 h-5" />
           </button>
