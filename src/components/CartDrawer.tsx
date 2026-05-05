@@ -59,14 +59,29 @@ export default function CartDrawer() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] animate-fadeIn" role="dialog" aria-modal="true" aria-label={t.cart.title[lang]}>
+    <div
+      className="fixed inset-0 z-[100] animate-fadeIn"
+      role="dialog"
+      aria-modal="true"
+      aria-label={t.cart.title[lang]}
+      style={{ height: '100vh', isolation: 'isolate' }}
+    >
       <button
         type="button"
         aria-label="Close cart"
         onClick={close}
-        className="absolute inset-0 bg-cocoa/60 backdrop-blur-sm"
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(43, 23, 18, 0.7)', backdropFilter: 'blur(4px)' }}
       />
-      <aside className="absolute top-0 right-0 h-full w-[88%] max-w-md bg-white shadow-2xl border-l border-beige flex flex-col">
+      <aside
+        className="absolute top-0 bottom-0 right-0 w-[88%] max-w-md flex flex-col"
+        style={{
+          backgroundColor: '#FFFFFF',
+          boxShadow: '0 25px 60px -10px rgba(0,0,0,0.45)',
+          borderLeft: '1px solid #EFD8C7',
+          height: '100vh',
+        }}
+      >
         <div className="flex items-center justify-between p-5 border-b border-beige bg-blushSoft">
           <div className="min-w-0">
             <h2 className="font-serif text-xl text-cocoa truncate">{t.cart.title[lang]}</h2>

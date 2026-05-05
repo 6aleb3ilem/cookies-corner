@@ -34,7 +34,7 @@ export default function MobileMenuDrawer({ open, onClose }: Props) {
       className="fixed inset-0 z-[100] animate-fadeIn"
       role="dialog"
       aria-modal="true"
-      style={{ isolation: 'isolate' }}
+      style={{ height: '100vh', isolation: 'isolate' }}
     >
       <button
         type="button"
@@ -44,11 +44,12 @@ export default function MobileMenuDrawer({ open, onClose }: Props) {
         style={{ backgroundColor: 'rgba(43, 23, 18, 0.7)', backdropFilter: 'blur(4px)' }}
       />
       <aside
-        className="absolute top-0 left-0 h-full w-[84%] max-w-sm flex flex-col"
+        className="absolute top-0 bottom-0 left-0 w-[84%] max-w-sm flex flex-col"
         style={{
           backgroundColor: '#FFFFFF',
           boxShadow: '0 25px 60px -10px rgba(0,0,0,0.45)',
           borderRight: '1px solid #EFD8C7',
+          height: '100vh',
         }}
       >
         <div
