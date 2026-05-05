@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { LanguageProvider } from '@/i18n/LanguageContext';
+import { CartProvider } from '@/cart/CartContext';
+import CartDrawer from '@/components/CartDrawer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://cookiescorners.com'),
-  title: 'Cookies Corner Nouakchott | Premium Handmade Cookies & Gift Boxes',
+  title: {
+    default: 'Cookies Corner Nouakchott | Handmade Cookies & Gift Boxes',
+    template: '%s | Cookies Corner',
+  },
   description:
     'Cookies Corner is a cute premium cookie gift brand in Nouakchott — handmade, soft, chocolate-heavy, and perfect for gifts, cravings, and small celebrations.',
   keywords: [
@@ -16,7 +21,7 @@ export const metadata: Metadata = {
     'cookies gourmands',
   ],
   openGraph: {
-    title: 'Cookies Corner Nouakchott | Premium Handmade Cookies & Gift Boxes',
+    title: 'Cookies Corner Nouakchott | Handmade Cookies & Gift Boxes',
     description:
       'Cookies Corner is a cute premium cookie gift brand in Nouakchott — handmade, soft, chocolate-heavy, and perfect for gifts, cravings, and small celebrations.',
     images: ['/images/hero/hero-gift-box.webp'],
@@ -39,7 +44,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-cream text-cocoa antialiased">
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <CartProvider>
+            {children}
+            <CartDrawer />
+          </CartProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

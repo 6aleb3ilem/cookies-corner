@@ -9,12 +9,14 @@ import PromoRibbon from './PromoRibbon';
 import { CartIcon, MenuIcon } from './Icons';
 import { useLang } from '@/i18n/LanguageContext';
 import { t } from '@/i18n/translations';
+import { useCart } from '@/cart/CartContext';
 
 const MobileMenuDrawer = dynamic(() => import('./MobileMenuDrawer'), { ssr: false });
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { lang } = useLang();
+  const { count, open: openCart } = useCart();
 
   return (
     <header className="sticky top-0 z-30 bg-cream/95 backdrop-blur border-b border-beige/50">
@@ -45,16 +47,21 @@ export default function Header() {
 
         <div className="flex items-center gap-2 shrink-0">
           <LanguageSwitcher compact />
-          <Link
-            href="/shop"
-            aria-label="Cart"
+          <button
+            type="button"
+            onClick={openCart}
+            aria-label={t.cart.viewOrder[lang]}
             className="relative w-10 h-10 grid place-items-center rounded-full bg-blushSoft text-blush shrink-0"
           >
             <CartIcon className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 bg-blush text-white text-[10px] w-4 h-4 grid place-items-center rounded-full font-semibold">
-              0
+            <span
+              className={`absolute -top-1 -right-1 text-white text-[10px] w-4 h-4 grid place-items-center rounded-full font-semibold ${
+                count > 0 ? 'bg-blush' : 'bg-cocoa/30'
+              }`}
+            >
+              {count}
             </span>
-          </Link>
+          </button>
         </div>
       </div>
       {/* Hidden on mobile, shown sm+: optional row showing nav inline. Keeping minimal. */}

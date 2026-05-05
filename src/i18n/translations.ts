@@ -185,6 +185,41 @@ export const t = {
     },
     follow: { en: 'Follow us', ar: 'تابعنا', fr: 'Suivez-nous' },
   },
+  cart: {
+    add: { en: 'Add to order', ar: 'أضف إلى الطلب', fr: 'Ajouter à la commande' },
+    added: { en: 'Added ✓', ar: 'تمت الإضافة ✓', fr: 'Ajouté ✓' },
+    qty: { en: 'Quantity', ar: 'الكمية', fr: 'Quantité' },
+    decrease: { en: 'Decrease quantity', ar: 'إنقاص الكمية', fr: 'Diminuer la quantité' },
+    increase: { en: 'Increase quantity', ar: 'زيادة الكمية', fr: 'Augmenter la quantité' },
+    title: { en: 'Your Order', ar: 'طلبك', fr: 'Votre commande' },
+    empty: {
+      en: 'Your order is empty. Add cookies from the menu.',
+      ar: 'طلبك فارغ. أضف كوكيز من القائمة.',
+      fr: 'Votre commande est vide. Ajoutez des cookies depuis le menu.',
+    },
+    subtotal: { en: 'Subtotal', ar: 'المجموع الفرعي', fr: 'Sous-total' },
+    total: { en: 'Total', ar: 'الإجمالي', fr: 'Total' },
+    items: { en: 'items', ar: 'عناصر', fr: 'articles' },
+    item: { en: 'item', ar: 'عنصر', fr: 'article' },
+    clear: { en: 'Clear order', ar: 'مسح الطلب', fr: 'Vider la commande' },
+    sendWhatsapp: {
+      en: 'Send order on WhatsApp',
+      ar: 'أرسل الطلب عبر واتساب',
+      fr: 'Envoyer la commande sur WhatsApp',
+    },
+    summaryHeader: {
+      en: 'Hi Cookies Corner! I’d like to order:',
+      ar: 'مرحباً كوكيز كورنر! أود طلب:',
+      fr: 'Bonjour Cookies Corner ! Je souhaite commander :',
+    },
+    summaryFooter: {
+      en: 'Could you confirm availability and delivery? Thank you!',
+      ar: 'هل يمكنكم تأكيد التوفر والتوصيل؟ شكراً لكم!',
+      fr: 'Pouvez-vous confirmer la disponibilité et la livraison ? Merci !',
+    },
+    viewOrder: { en: 'View order', ar: 'عرض الطلب', fr: 'Voir la commande' },
+    remove: { en: 'Remove', ar: 'إزالة', fr: 'Retirer' },
+  },
 };
 
 export type TKey = keyof typeof t;
