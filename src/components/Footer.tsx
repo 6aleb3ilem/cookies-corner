@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="px-5 py-10 max-w-screen-md mx-auto">
         <div className="flex items-center gap-3 mb-4">
           <Image
-            src="/images/logo/cookies-corner-logo.png"
+            src="/images/logo/cookies-corner-logo.jpeg"
             alt="Cookies Corner"
             width={36}
             height={36}

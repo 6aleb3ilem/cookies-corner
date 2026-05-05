@@ -1,11 +1,13 @@
 'use client';
 
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { stories } from '@/data/stories';
 import { useLang } from '@/i18n/LanguageContext';
 import { t } from '@/i18n/translations';
-import StoryViewerOverlay from './StoryViewerOverlay';
+
+const StoryViewerOverlay = dynamic(() => import('./StoryViewerOverlay'), { ssr: false });
 
 export default function StoriesStrip() {
   const { lang } = useLang();
@@ -59,7 +61,9 @@ export default function StoriesStrip() {
         ))}
       </div>
 
-      <StoryViewerOverlay open={open} initialStoryIndex={start} onClose={() => setOpen(false)} />
+      {open && (
+        <StoryViewerOverlay open={open} initialStoryIndex={start} onClose={() => setOpen(false)} />
+      )}
     </section>
   );
 }
